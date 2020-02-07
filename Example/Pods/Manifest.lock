@@ -1,0 +1,16 @@
+PODS:
+  - CloudsImporting (0.1.0)
+
+DEPENDENCIES:
+  - CloudsImporting (from `../`)
+
+EXTERNAL SOURCES:
+  CloudsImporting:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CloudsImporting: e04564226668a1fc84f3b11d60041f4d252ff5a3
+
+PODFILE CHECKSUM: dcbec17d06e67134a810959fb481c8329e0fd05d
+
+COCOAPODS: 1.8.4
