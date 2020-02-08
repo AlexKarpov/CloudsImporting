@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
 [![Platform](https://img.shields.io/cocoapods/p/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
 
+# This pod is under development
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -17,7 +19,7 @@ CloudsImporting is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CloudsImporting'
+pod 'CloudsImporting', :git => 'https://github.com/AlexKarpov/CloudsImporting.git'
 ```
 
 ## Author
