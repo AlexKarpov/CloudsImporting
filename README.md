@@ -1,6 +1,6 @@
 # CloudsImporting
 
-[![CI Status](https://img.shields.io/travis/Alexander Karpov/CloudsImporting.svg?style=flat)](https://travis-ci.org/Alexander Karpov/CloudsImporting)
+[![CI Status](https://img.shields.io/travis/alexkarpov/CloudsImporting.svg?style=flat)](https://travis-ci.org/alexkarpov/CloudsImporting)
 [![Version](https://img.shields.io/cocoapods/v/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
 [![License](https://img.shields.io/cocoapods/l/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
 [![Platform](https://img.shields.io/cocoapods/p/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
