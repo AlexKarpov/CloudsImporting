@@ -1,6 +1,0 @@
-framework module CloudsImporting {
-  umbrella header "CloudsImporting-umbrella.h"
-
-  export *
-  module * { export * }
-}

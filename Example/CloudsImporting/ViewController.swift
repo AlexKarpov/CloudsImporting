@@ -7,18 +7,54 @@
 //
 
 import UIKit
+import CloudsImporting
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
+    
+    var pendingImports: [IDownloadRequest] = []
+    var downloadedFiles: [File] = []
+    
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//MARK: - Importing logic
+
+extension ViewController: CloudContentViewController.Delegate {
+    func picker(_ picker: CloudContentViewController, didSelect requests: [IDownloadRequest]) {
+        pendingImports.insert(contentsOf: requests, at: 0)
+        let indexPaths = requests.enumerated().map { pair -> IndexPath in
+            pair.element.handleData(at: self)
+            return IndexPath(row: pair.offset, section: 0)
+        }
+        tableView?.insertRows(at: indexPaths, with: .automatic)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func didFinishImporting(_ file: File) {
+        #warning("handle file")
+        print(file)
     }
+ 
+    func didSelectImport(_ strategy: Import.Strategy) {
+        try? present(
+            CloudContentViewController.viewController(
+                with: strategy,
+                delegate: self
+            )
+        )
+    }
+    
+    @IBAction func toggleImport(_ sender: UIBarButtonItem? = nil) {
+        present(
+            UIAlertController.importSourcePicker(
+                sender: navigationItem.leftBarButtonItem,
+                selectionDelegate: didSelectImport
+            )
+        )
+    }
+}
 
+extension ViewController: IFileDownloadHandler {
+    func requestDidComplete(with result: Result<DownloadResult?, DownloadError>) {
+        print(result)
+    }
 }
 

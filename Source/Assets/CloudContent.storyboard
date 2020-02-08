@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vr8-gR-VVc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Import script-->
+        <scene sceneID="yej-40-Vve">
+            <objects>
+                <tableViewController storyboardIdentifier="FileList" title="Import script" id="nKN-JM-Rfs" customClass="CloudContentViewController" customModule="Importing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ylb-UM-XIr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="ij7-rO-ZlP">
+                            <rect key="frame" x="0.0" y="116" width="414" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FileRow" rowHeight="60" id="pL4-xe-VNJ" customClass="FileRow" customModule="Importing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pL4-xe-VNJ" id="ZBw-zS-gSa">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SR2-GQ-Hbd">
+                                            <rect key="frame" x="10" y="5" width="373" height="50"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder-icon" translatesAutoresizingMaskIntoConstraints="NO" id="uh7-gR-X2T">
+                                                    <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="uh7-gR-X2T" secondAttribute="height" multiplier="1:1" id="XIo-SO-dqU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тест" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgr-Rw-dZ6">
+                                                    <rect key="frame" x="40" y="15" width="333" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SR2-GQ-Hbd" firstAttribute="leading" secondItem="ZBw-zS-gSa" secondAttribute="leading" constant="10" id="NsU-5E-LcA"/>
+                                        <constraint firstAttribute="trailing" secondItem="SR2-GQ-Hbd" secondAttribute="trailing" id="Z9e-19-jQ3"/>
+                                        <constraint firstAttribute="bottom" secondItem="SR2-GQ-Hbd" secondAttribute="bottom" constant="5" id="eqn-Pn-abq"/>
+                                        <constraint firstItem="SR2-GQ-Hbd" firstAttribute="top" secondItem="ZBw-zS-gSa" secondAttribute="top" constant="5" id="rOb-8K-iD9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="uh7-gR-X2T" id="0eU-Wb-Rxv"/>
+                                    <outlet property="title" destination="Pgr-Rw-dZ6" id="eVh-aW-fT7"/>
+                                    <segue destination="2wl-hP-BD5" kind="show" identifier="openFolder" id="I9g-vD-mL6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nKN-JM-Rfs" id="hY7-Bs-FwX"/>
+                            <outlet property="delegate" destination="nKN-JM-Rfs" id="0Wi-ew-Ape"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Import script" leftItemsSupplementBackButton="YES" id="7iL-9o-Jqt">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="n6C-4A-f8O">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="done:" destination="nKN-JM-Rfs" id="mLV-82-hYX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="HIZ-o4-RuD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="getFiles:" destination="nKN-JM-Rfs" eventType="valueChanged" id="r5X-LX-yoc"/>
+                        </connections>
+                    </refreshControl>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqu-gO-P8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="82"/>
+        </scene>
+        <!--FileList-->
+        <scene sceneID="3A0-EH-lFz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CloudContent" referencedIdentifier="FileList" id="2wl-hP-BD5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Vgf-y6-XX5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZy-pf-Vm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="81"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8NZ-UQ-hFu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vr8-gR-VVc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gHo-M9-ecI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nKN-JM-Rfs" kind="relationship" relationship="rootViewController" id="jZU-Bh-MXS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgf-zz-K2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="folder-icon" width="20" height="16"/>
+    </resources>
+</document>

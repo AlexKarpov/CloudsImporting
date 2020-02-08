@@ -22,7 +22,7 @@ pod 'CloudsImporting'
 
 ## Author
 
-Alexander Karpov, a_karpov@mifprojects.com
+Alexander Karpov, alexander.karpov.dev@gmail.com
 
 ## License
 
