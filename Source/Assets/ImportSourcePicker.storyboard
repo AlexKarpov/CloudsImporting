@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GIM-gb-Oec">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Import Source Picker-->
+        <scene sceneID="Y7f-A1-0bu">
+            <objects>
+                <collectionViewController id="GIM-gb-Oec" customClass="ImportSourcePicker" customModule="Importing" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="eB8-zW-oCd">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="fBv-DB-YXk">
+                            <size key="itemSize" width="115" height="110"/>
+                            <size key="estimatedItemSize" width="115" height="110"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ImportSourceCell" id="FD1-ff-EkX" customClass="ImportSourceCell" customModule="Importing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="10" width="114" height="110"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rcU-cQ-daR">
+                                    <rect key="frame" x="0.0" y="0.0" width="114" height="110"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NRx-lx-ymW">
+                                            <rect key="frame" x="27" y="18" width="60" height="49.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="Kow-4c-5Ag"/>
+                                                <constraint firstAttribute="width" constant="60" id="jOo-cr-zcW"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cloud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOu-z9-wZh">
+                                            <rect key="frame" x="39" y="70" width="36" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iOu-z9-wZh" firstAttribute="centerX" secondItem="NRx-lx-ymW" secondAttribute="centerX" id="7St-Xe-mK5"/>
+                                        <constraint firstItem="NRx-lx-ymW" firstAttribute="leading" secondItem="rcU-cQ-daR" secondAttribute="leading" constant="27" id="Xza-QK-CWd"/>
+                                        <constraint firstItem="NRx-lx-ymW" firstAttribute="centerX" secondItem="rcU-cQ-daR" secondAttribute="centerX" id="j17-50-qL1"/>
+                                        <constraint firstItem="NRx-lx-ymW" firstAttribute="top" secondItem="rcU-cQ-daR" secondAttribute="top" constant="15" id="mjZ-jA-yHF"/>
+                                        <constraint firstItem="iOu-z9-wZh" firstAttribute="top" secondItem="NRx-lx-ymW" secondAttribute="bottom" id="zV5-MH-OMv"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="NRx-lx-ymW" id="hsv-7E-s76"/>
+                                    <outlet property="title" destination="iOu-z9-wZh" id="2SY-H9-bnd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="GIM-gb-Oec" id="cnY-Xi-A1Z"/>
+                            <outlet property="delegate" destination="GIM-gb-Oec" id="8Hp-ze-Ziz"/>
+                        </connections>
+                    </collectionView>
+                    <value key="contentSizeForViewInPopover" type="size" width="335" height="130"/>
+                    <size key="freeformSize" width="335" height="130"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RwR-Ud-b5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242.0289855072464" y="-14.397321428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud.fill" catalog="system" width="64" height="42"/>
+    </resources>
+</document>
