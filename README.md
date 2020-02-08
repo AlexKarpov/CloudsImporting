@@ -5,7 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
 [![Platform](https://img.shields.io/cocoapods/p/CloudsImporting.svg?style=flat)](https://cocoapods.org/pods/CloudsImporting)
 
-# This pod is under development
+# ⚠️ This pod is under development 🛠
+
+## TODO:
+* Develop google drive proxy
+* Develop box proxy
+* Write Unit tests 🚀
+* Write documentation 📖
+* write usage guide ℹ️
 
 ## Example
 
