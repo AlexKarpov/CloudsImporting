@@ -7,6 +7,8 @@
 
 # ⚠️ This pod is under development 🛠
 
+CloudsImporting is the service that wraps different cloud storages APIs/SDKs to unify process of import files from them.
+
 ## TODO:
 * Develop google drive proxy
 * Develop box proxy
