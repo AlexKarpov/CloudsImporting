@@ -2,7 +2,7 @@
 //  GoogleDriveProxy+GIDSign.swift
 //  Importing
 //
-//  Created by Stas Lavruk on 26.11.2019.
+//  Created by Alexander Karpov on 26.11.2019.
 //  Copyright © 2019 Alexander Karpov. All rights reserved.
 //
 
